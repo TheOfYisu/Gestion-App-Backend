@@ -47,6 +47,32 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Migration for mysql
+
+```bash
+# Migration generate
+$ npm run migration:generate:mysql
+
+# Mirgration run
+$ npm run migration:run:mysql
+
+# Migration revert
+$ npm run migration:revert:mysql
+```
+
+## Migration for mognobd
+
+```bash
+# Migration generate
+$ npm run migration:generate:mognobd
+
+# Mirgration run
+$ npm run migration:run:mognobd
+
+# Migration revert
+$ npm run migration:revert:mognobd
+```
+
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).

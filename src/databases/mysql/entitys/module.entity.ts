@@ -1,0 +1,26 @@
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+
+@Entity('modules')
+export class ModulesEntity {
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column({ unique: true, length: 50 })
+  name: string;
+
+  @Column({ length: 255 })
+  description: string;
+
+  @Column()
+  status: number;
+
+  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
+  created_at: Date;
+
+  @Column({
+    type: 'timestamp',
+    default: () => 'CURRENT_TIMESTAMP',
+    onUpdate: 'CURRENT_TIMESTAMP',
+  })
+  updated_at: Date;
+}
